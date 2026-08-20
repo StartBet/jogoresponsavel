@@ -1,0 +1,262 @@
+<script setup lang="ts">
+import { StButton, StChip, StPaper, StTypography } from '@startbet/st-core-ui'
+
+const mythBustedCards = [
+  {
+    myth: '“Se eu insistir por mais tempo, consigo recuperar o que perdi.”',
+    fact: 'Aumentar o tempo ou o valor apostado não garante recuperação e pode ampliar o prejuízo.'
+  },
+  {
+    myth: '“Conhecer muito um esporte garante uma aposta vencedora.”',
+    fact: 'Conhecimento ajuda a interpretar contexto, mas eventos esportivos continuam sujeitos a incerteza.'
+  }
+] as const
+
+const supportChannelCards = [
+  {
+    title: 'Atendimento SUS',
+    body: 'Atendimento gratuito, sigiloso e profissional. Acesse o app Meu SUS Digital para encontrar orientação e a rede pública de cuidado.',
+    link: 'https://meususdigital.saude.gov.br/login'
+  },
+  {
+    title: 'Autoteste do Governo',
+    body: 'Avalie sua relação com o jogo por meio do recurso oficial do Governo Federal. Rápido, gratuito e anônimo.',
+    link: 'https://miniapps.saude.gov.br/teste-jogo/'
+  }
+] as const
+
+const clinicCards = [
+  {
+    title: 'Clínicas Revive',
+    body: 'Tratamento de dependências, incluindo ludopatia, com acolhimento, avaliação e acompanhamento especializado.',
+    link: 'https://clinicasrevive.com.br/'
+  },
+  {
+    title: 'Grupo Vida Serena',
+    body: 'Opções de cuidado e tratamento para dependências comportamentais com suporte clínico e terapêutico.',
+    link: 'https://www.vidaserena.com.br/'
+  },
+  {
+    title: 'Procure Clínicas',
+    body: 'Diretório nacional para localizar clínicas e centros de tratamento que atendem questões relacionadas ao jogo compulsivo.',
+    link: 'https://www.google.com/search?q=clinica+tratamento+ludopatia+brasil'
+  }
+] as const
+
+const groupCards = [
+  {
+    title: 'Jogadores Anônimos',
+    body: 'Reuniões presenciais e grupos de partilha no modelo dos 12 passos para quem busca parar de jogar.',
+    link: 'https://www.jogadoresanonimos.com.br/'
+  },
+  {
+    title: 'JA Online',
+    body: 'Apoio por videoconferência e reuniões remotas, facilitando o acesso de onde você estiver.',
+    link: 'https://www.jogadoresanonimos.com.br/'
+  },
+  {
+    title: 'Grupo Jog-Anon',
+    body: 'Suporte para familiares e amigos de quem enfrenta problemas com jogos e apostas.',
+    link: 'https://www.gam-anon.org/'
+  }
+] as const
+</script>
+
+<template>
+  <section id="support" class="bg-st-surface-4 py-st-10 md:py-st-15 lg:py-st-20">
+    <div class="mx-auto w-full max-w-st-160 px-st-2 md:px-st-6 lg:px-st-10">
+      <header class="flex flex-col gap-st-2 mb-st-8 md:mb-st-10 lg:mb-st-12 max-w-st-160">
+        <StTypography
+          variant="body-large"
+          class-name="text-st-secondary uppercase tracking-[0.3em]"
+        >
+          Informação
+        </StTypography>
+
+        <StTypography
+          as="h2"
+          line-height="snug"
+          :lines="2"
+          variant="hero-title"
+          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+        >
+          Mitos desvendados. Escolhas mais
+          <span class="text-st-secondary italic"> conscientes</span>.
+        </StTypography>
+      </header>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-st-4 md:gap-st-4 mb-st-12 md:mb-st-16 lg:mb-st-20"
+      >
+        <StPaper
+          v-for="card in mythBustedCards"
+          :key="card.myth"
+          surface="1"
+          :elevation="2"
+          class-name="h-full flex flex-col overflow-hidden border border-st-border-2"
+        >
+          <div class="flex items-start gap-st-3 p-st-3 bg-st-surface-3">
+            <StChip variant="negative">Mito</StChip>
+            <StTypography variant="body-medium" class-name="text-content-default">
+              {{ card.myth }}
+            </StTypography>
+          </div>
+          <div class="flex items-start gap-st-3 p-st-3 bg-st-surface-2 border-t border-st-border-2">
+            <StChip variant="positive">Fato</StChip>
+            <StTypography variant="body-medium" class-name="text-content-default">
+              {{ card.fact }}
+            </StTypography>
+          </div>
+        </StPaper>
+      </div>
+
+      <div
+        class="flex flex-col items-center text-center gap-st-2 mb-st-6 md:mb-st-8 lg:mb-st-10 max-w-st-120 mx-auto"
+      >
+        <StTypography
+          variant="body-large"
+          class-name="text-st-secondary uppercase tracking-[0.3em]"
+        >
+          Apoio
+        </StTypography>
+
+        <StTypography
+          as="h3"
+          line-height="snug"
+          :lines="2"
+          variant="hero-title"
+          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+        >
+          Precisou de apoio? A gente tá
+          <span class="text-st-secondary italic"> junto</span>.
+        </StTypography>
+
+        <StTypography variant="body-medium" class-name="text-content-secondary">
+          Buscar apoio não é fraqueza — é jogar bem. Existem canais gratuitos, sigilosos e
+          profissionais prontos pra te ajudar.
+        </StTypography>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-st-4 md:gap-st-4 mb-st-10 md:mb-st-12 lg:mb-st-16"
+      >
+        <StPaper
+          v-for="card in supportChannelCards"
+          :key="card.title"
+          surface="1"
+          :elevation="2"
+          class-name="h-full flex flex-col gap-st-3 p-st-4 border border-st-border-2"
+        >
+          <StTypography variant="highlight-medium" class-name="text-content-default uppercase">
+            {{ card.title }}
+          </StTypography>
+          <StTypography variant="body-small" class-name="text-content-secondary flex-1">
+            {{ card.body }}
+          </StTypography>
+          <div class="pt-st-2 mt-auto">
+            <a
+              :href="card.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-stretch w-fit"
+            >
+              <StButton variant="text" color="secondary" size="small" icon-right="right-to-bracket">
+                Saiba mais
+              </StButton>
+            </a>
+          </div>
+        </StPaper>
+      </div>
+
+      <div
+        class="border-t border-st-border-2 pt-st-8 md:pt-st-10 lg:pt-st-12 mb-st-8 md:mb-st-10 lg:mb-st-12 flex flex-col items-center text-center gap-st-2"
+      >
+        <StTypography
+          as="h3"
+          line-height="snug"
+          :lines="2"
+          variant="hero-title"
+          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+        >
+          Clínicas de
+          <span class="text-st-secondary italic"> apoio</span>.
+        </StTypography>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-st-4 md:gap-st-4 mb-st-10 md:mb-st-12 lg:mb-st-16"
+      >
+        <StPaper
+          v-for="card in clinicCards"
+          :key="card.title"
+          surface="1"
+          :elevation="2"
+          class-name="h-full flex flex-col gap-st-3 p-st-4 border border-st-border-2"
+        >
+          <StTypography variant="highlight-medium" class-name="text-content-default uppercase">
+            {{ card.title }}
+          </StTypography>
+          <StTypography variant="body-small" class-name="text-content-secondary flex-1">
+            {{ card.body }}
+          </StTypography>
+          <div class="pt-st-2 mt-auto">
+            <a
+              :href="card.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-stretch w-fit"
+            >
+              <StButton variant="text" color="secondary" size="small" icon-right="right-to-bracket">
+                Saiba mais
+              </StButton>
+            </a>
+          </div>
+        </StPaper>
+      </div>
+
+      <div
+        class="border-t border-st-border-2 pt-st-8 md:pt-st-10 lg:pt-st-12 mb-st-8 md:mb-st-10 lg:mb-st-12 flex flex-col items-center text-center gap-st-2"
+      >
+        <StTypography
+          as="h3"
+          line-height="snug"
+          :lines="2"
+          variant="hero-title"
+          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+        >
+          Grupos de
+          <span class="text-st-secondary italic"> apoio</span>.
+        </StTypography>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-st-4 md:gap-st-4">
+        <StPaper
+          v-for="card in groupCards"
+          :key="card.title"
+          surface="1"
+          :elevation="2"
+          class-name="h-full flex flex-col gap-st-3 p-st-4 border border-st-border-2"
+        >
+          <StTypography variant="highlight-medium" class-name="text-content-default uppercase">
+            {{ card.title }}
+          </StTypography>
+          <StTypography variant="body-small" class-name="text-content-secondary flex-1">
+            {{ card.body }}
+          </StTypography>
+          <div class="pt-st-2 mt-auto">
+            <a
+              :href="card.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-stretch w-fit"
+            >
+              <StButton variant="text" color="secondary" size="small" icon-right="right-to-bracket">
+                Saiba mais
+              </StButton>
+            </a>
+          </div>
+        </StPaper>
+      </div>
+    </div>
+  </section>
+</template>
