@@ -34,7 +34,11 @@ customHeaders:
       - key: 'Cache-Control'
         value: 'public, max-age=31536000, immutable'
   # HTML mantém o mesmo nome entre deploys: nunca cachear
-  - pattern: '**/*.html'
+  - pattern: '/*.html'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=0, must-revalidate'
+  - pattern: '/**/*.html'
     headers:
       - key: 'Cache-Control'
         value: 'public, max-age=0, must-revalidate'
