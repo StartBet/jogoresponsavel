@@ -101,7 +101,7 @@ const heroImageSrc = `${heroImageBase},width=1024/https://cdn.start.bet.br/start
               fetchpriority="high"
               decoding="async"
             />
-            <div class="absolute top-st-6 right-st-2">
+            <div class="absolute top-st-1 right-0 md:top-st-6 md:right-st-2">
               <StChip variant="primary"> você decide seus limites </StChip>
               <StBadge variant="positive" size="small" pulse class="!absolute top-0 -left-1" />
             </div>
