@@ -1,0 +1,44 @@
+version: 1
+
+env:
+  variables:
+    # husky não deve tentar instalar git hooks no ambiente de build
+    HUSKY: '0'
+
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install 22 && nvm use 22
+        - node -v
+        - npm ci
+    build:
+      commands:
+        - npm run lint
+        - npm test
+        # gera o site estático em .output/public
+        - npm run generate
+  artifacts:
+    # publica apenas o resultado estático — nada de servidor Node
+    baseDirectory: .output/public
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+
+customHeaders:
+  # assets com hash no nome: podem ser cacheados para sempre
+  - pattern: '/_nuxt/**/*'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=31536000, immutable'
+  # HTML mantém o mesmo nome entre deploys: nunca cachear
+  - pattern: '**/*.html'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=0, must-revalidate'
+  - pattern: '/_payload.json'
+    headers:
+      - key: 'Cache-Control'
+        value: 'public, max-age=0, must-revalidate'
