@@ -14,5 +14,13 @@ export default defineNuxtConfig({
 
   features: {
     inlineStyles: false
+  },
+
+  nitro: {
+    prerender: {
+      // sem isso, um erro de pré-renderização apenas gera aviso e o build
+      // publica o site sem a página que falhou
+      failOnError: true
+    }
   }
 })
