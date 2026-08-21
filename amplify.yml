@@ -16,14 +16,19 @@ frontend:
       commands:
         - npm run lint
         - npm test
-        # gera o site estático em .output/public
-        - npm run generate
+        # O ambiente de build do Amplify injeta NITRO_PRESET=aws-amplify. Com
+        # esse preset o Nitro gera um bundle SSR em .amplify-hosting/compute,
+        # escreve os estáticos em .amplify-hosting/static e NÃO pré-renderiza a
+        # rota "/" (ela seria servida pela função em runtime). Resultado: nunca
+        # existia index.html. Forçamos o preset estático.
+        - rm -rf .output .amplify-hosting
+        - NITRO_PRESET=static npm run generate
+        - test -f .output/public/index.html
     postBuild:
       commands:
-        # O Amplify detecta "nuxt" no package.json, marca a app como SSR
-        # (WEB_COMPUTE) a cada build e descarta o index.html da raiz, esperando
-        # que uma função de servidor atenda "/". Publicamos a home também como
-        # home.html e apontamos "/" para ela por regra de reescrita 200.
+        # Cópia de segurança da home: se o Amplify voltar a tratar a app como
+        # SSR, ele descarta o index.html da raiz e "/" pode ser apontado para
+        # home.html por uma regra de reescrita 200 no console.
         - cp .output/public/index.html .output/public/home.html
         - ls -la .output/public
   artifacts:
