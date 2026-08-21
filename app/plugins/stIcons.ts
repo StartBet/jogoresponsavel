@@ -14,7 +14,12 @@ import {
   faCircleCheck,
   faCoins,
   faBrain,
-  faDice
+  faDice,
+  faLock,
+  faArrowLeft,
+  faArrowRight,
+  faTriangleExclamation,
+  faCircleExclamation
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faInstagram,
@@ -45,6 +50,11 @@ export default defineNuxtPlugin(() => {
     faCoins,
     faBrain,
     faDice,
+    faLock,
+    faArrowLeft,
+    faArrowRight,
+    faTriangleExclamation,
+    faCircleExclamation,
     faInstagram,
     faTelegram,
     faTiktok,

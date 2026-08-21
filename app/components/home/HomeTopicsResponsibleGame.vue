@@ -8,6 +8,10 @@ import {
   StTypography,
   StUnorderedList
 } from '@startbet/st-core-ui'
+import { SELF_ASSESSMENT_MODAL_NAME } from '~/components/modal/self-assessment/StSelfAssessmentModal.interface'
+import { useStModal } from '~/composables/useStModal'
+
+const { open: openSelfAssessment } = useStModal(SELF_ASSESSMENT_MODAL_NAME)
 
 type TabKey = 'overview' | 'problems' | 'howItWorks' | 'myths'
 interface TabItem {
@@ -321,7 +325,7 @@ const mythCards = [
             </StTypography>
           </div>
 
-          <a href="https://start.bet.br/" target="_self" class="w-full lg:w-auto">
+          <div class="w-full lg:w-auto">
             <StButton
               variant="solid"
               color="secondary"
@@ -329,10 +333,11 @@ const mythCards = [
               icon-left="user-check"
               :full-width="true"
               class-name="shadow-st-action-hover"
+              @click="openSelfAssessment"
             >
               Fazer autoavaliação
             </StButton>
-          </a>
+          </div>
         </StPaper>
       </div>
     </div>
