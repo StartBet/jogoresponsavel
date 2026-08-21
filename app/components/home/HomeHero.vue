@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { StBadge, StButton, StChip, StTypography } from '@startbet/st-core-ui'
+import { SELF_ASSESSMENT_MODAL_NAME } from '~/components/modal/self-assessment/StSelfAssessmentModal.interface'
+import { useStModal } from '~/composables/useStModal'
+
+const { open: openSelfAssessment } = useStModal(SELF_ASSESSMENT_MODAL_NAME)
 
 const heroImageBase = 'https://cdn.start.bet.br/cdn-cgi/image/format=auto,quality=75,fit=scale-down'
 
@@ -65,17 +69,18 @@ const heroImageSrc = `${heroImageBase},width=1024/https://cdn.start.bet.br/start
               </StButton>
             </a>
 
-            <a href="https://start.bet.br/" target="_self" class="w-full sm:w-auto">
+            <div class="w-full sm:w-auto">
               <StButton
                 variant="outline"
                 color="primary"
                 size="large"
                 icon-left="user-check"
                 :full-width="true"
+                @click="openSelfAssessment"
               >
                 Fazer autoavaliação
               </StButton>
-            </a>
+            </div>
           </div>
         </div>
 
