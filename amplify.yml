@@ -18,6 +18,14 @@ frontend:
         - npm test
         # gera o site estático em .output/public
         - npm run generate
+    postBuild:
+      commands:
+        # O Amplify detecta "nuxt" no package.json, marca a app como SSR
+        # (WEB_COMPUTE) a cada build e descarta o index.html da raiz, esperando
+        # que uma função de servidor atenda "/". Publicamos a home também como
+        # home.html e apontamos "/" para ela por regra de reescrita 200.
+        - cp .output/public/index.html .output/public/home.html
+        - ls -la .output/public
   artifacts:
     # publica apenas o resultado estático — nada de servidor Node
     baseDirectory: .output/public
