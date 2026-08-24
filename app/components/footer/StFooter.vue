@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { StButton, StIcon, StPaper, StTypography } from '@startbet/st-core-ui'
+import StIconBadge from '~/components/icon-badge'
 
 defineOptions({ name: 'StFooter' })
 
@@ -43,11 +44,7 @@ const chatHref = 'https://start.bet.br/'
         class-name="flex flex-col gap-st-2 md:gap-st-3 p-st-2 md:p-st-4"
       >
         <div class="flex items-center gap-st-2">
-          <div
-            class="w-st-6 h-st-6 shrink-0 rounded-st-1 bg-st-surface-3 flex items-center justify-center text-st-secondary shadow-st-paper-1"
-          >
-            <StIcon name="circle-info" :size="6" />
-          </div>
+          <StIconBadge name="circle-info" />
 
           <div class="flex flex-col gap-st-1">
             <StTypography

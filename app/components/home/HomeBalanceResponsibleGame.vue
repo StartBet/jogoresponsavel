@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { StIcon, StPaper, StTypography } from '@startbet/st-core-ui'
+import { StPaper, StTypography } from '@startbet/st-core-ui'
+import StIconBadge from '~/components/icon-badge'
 
 const balanceCards = [
   {
@@ -75,15 +76,11 @@ const balanceCards = [
           :elevation="1"
           class-name="h-full flex flex-col gap-st-2 p-st-4 border border-st-border-2 rounded-st-2 relative overflow-hidden"
         >
-          <div class="relative flex items-end justify-between gap-st-2 mb-st-1">
-            <StTypography variant="hero-title" class-name="text-st-secondary">
+          <div class="relative flex items-center justify-between gap-st-2">
+            <StTypography variant="hero-title" line-height="snug" class-name="text-st-secondary">
               {{ card.number }}
             </StTypography>
-            <div
-              class="w-st-8 h-st-8 rounded-st-1 bg-st-secondary flex items-center justify-center text-st-surface-0 shadow-st-paper-1"
-            >
-              <StIcon :name="card.icon" :size="6" />
-            </div>
+            <StIconBadge :name="card.icon" />
           </div>
           <StTypography variant="highlight-medium" class-name="text-content-default uppercase">
             {{ card.title }}
