@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import StHeader from '~/components/header/StHeader.vue'
+import StFooter from '~/components/footer/StFooter.vue'
 import StSelfAssessmentModal from '~/components/modal/self-assessment/StSelfAssessmentModal.vue'
 </script>
 
@@ -12,6 +13,8 @@ import StSelfAssessmentModal from '~/components/modal/self-assessment/StSelfAsse
     <main class="flex-1">
       <slot />
     </main>
+
+    <StFooter />
 
     <StSelfAssessmentModal />
   </div>

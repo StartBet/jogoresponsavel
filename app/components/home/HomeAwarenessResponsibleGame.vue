@@ -56,18 +56,35 @@ const principleCards = [
           apertar, não espere: procure orientação e use os canais de apoio disponíveis.
         </StTypography>
 
-        <NuxtLink to="/#support" class="w-full md:w-auto">
-          <StButton
-            variant="solid"
-            color="secondary"
-            size="large"
-            icon-right="right-to-bracket"
-            :full-width="true"
-            class-name="shadow-st-action-hover mt-st-2"
-          >
-            Ver canais de apoio
-          </StButton>
-        </NuxtLink>
+        <div
+          class="flex w-full flex-col items-center justify-center gap-st-4 md:w-auto md:flex-row"
+        >
+          <NuxtLink to="/#support" class="w-full md:w-auto">
+            <StButton
+              variant="solid"
+              color="secondary"
+              size="large"
+              icon-right="right-to-bracket"
+              :full-width="true"
+              class-name="shadow-st-action-hover"
+            >
+              Ver canais de apoio
+            </StButton>
+          </NuxtLink>
+
+          <NuxtLink to="https://start.bet.br/privacy-policy" class="w-full md:w-auto">
+            <StButton
+              variant="solid"
+              color="primary"
+              size="large"
+              icon-right="right-to-bracket"
+              :full-width="true"
+              class-name="shadow-st-action-hover"
+            >
+              Ver política de privacidade
+            </StButton>
+          </NuxtLink>
+        </div>
       </StPaper>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-st-4 md:gap-st-4">
