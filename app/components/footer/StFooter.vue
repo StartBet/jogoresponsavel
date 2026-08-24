@@ -2,11 +2,13 @@
 import { computed } from 'vue'
 import { StButton, StIcon, StIllustration, StPaper, StTypography } from '@startbet/st-core-ui'
 import StIconBadge from '~/components/icon-badge'
+import { useZendeskChat } from '~/composables/useZendeskChat'
 import { useThemeService } from '~/services/themeService'
 
 defineOptions({ name: 'StFooter' })
 
 const { theme } = useThemeService()
+const { isLoading: isChatLoading, open: openChat } = useZendeskChat()
 
 const brandIllustrationName = computed(() =>
   theme.value === 'light' ? 'brands/logo_light' : 'brands/logo_dark'
@@ -51,8 +53,6 @@ const supportChannels = [
     external: true
   }
 ] as const
-
-const chatHref = 'https://start.bet.br/'
 </script>
 
 <template>
@@ -119,18 +119,20 @@ const chatHref = 'https://start.bet.br/'
             </li>
           </ul>
 
-          <a :href="chatHref" target="_self" class="w-full lg:w-auto">
+          <div class="w-full lg:w-auto">
             <StButton
               variant="solid"
               color="secondary"
               size="large"
               icon-left="comment"
               :full-width="true"
+              :disabled="isChatLoading"
               class-name="shadow-st-action-hover"
+              @click="openChat"
             >
-              Abrir chat
+              {{ isChatLoading ? 'Abrindo chat...' : 'Abrir chat' }}
             </StButton>
-          </a>
+          </div>
         </div>
       </StPaper>
 
