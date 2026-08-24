@@ -36,7 +36,7 @@ const principleCards = [
       >
         <StTypography
           variant="body-large"
-          class-name="text-st-secondary uppercase tracking-[0.3em]"
+          class-name="text-st-content-secondary uppercase tracking-[0.3em]"
         >
           Consciência
         </StTypography>
@@ -49,7 +49,7 @@ const principleCards = [
           class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Pedir ajuda também é
-          <span class="text-st-secondary italic"> jogar bem</span>.
+          <span class="text-st-content-secondary italic"> jogar bem</span>.
         </StTypography>
 
         <StTypography variant="body-medium" class-name="text-content-secondary max-w-[95ch]">

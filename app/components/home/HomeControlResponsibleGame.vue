@@ -53,7 +53,7 @@ const controlToolsCards: ControlToolCard[] = [
       <header class="flex flex-col gap-st-2 mb-st-4 md:mb-st-5 lg:mb-st-6 max-w-st-160">
         <StTypography
           variant="body-large"
-          class-name="text-st-secondary uppercase tracking-[0.3em]"
+          class-name="text-st-content-secondary uppercase tracking-[0.3em]"
         >
           Controle
         </StTypography>

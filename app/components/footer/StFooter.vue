@@ -70,7 +70,7 @@ const supportChannels = [
           <div class="flex flex-col gap-st-1">
             <StTypography
               variant="body-small"
-              class-name="text-st-secondary uppercase tracking-[0.3em]"
+              class-name="text-st-content-secondary uppercase tracking-[0.3em]"
             >
               Suporte StartBet
             </StTypography>
@@ -95,7 +95,11 @@ const supportChannels = [
               :key="channel.id"
               class="flex items-center gap-st-3"
             >
-              <StIcon :name="channel.icon" :size="6" class-name="text-st-secondary shrink-0" />
+              <StIcon
+                :name="channel.icon"
+                :size="6"
+                class-name="text-st-content-secondary shrink-0"
+              />
 
               <div class="flex flex-col">
                 <StTypography variant="body-small" class-name="text-content-secondary">
@@ -110,7 +114,7 @@ const supportChannels = [
                 >
                   <StTypography
                     variant="highlight-medium"
-                    class-name="text-st-secondary hover:underline"
+                    class-name="text-st-content-secondary hover:underline"
                   >
                     {{ channel.value }}
                   </StTypography>

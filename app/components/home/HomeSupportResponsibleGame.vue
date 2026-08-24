@@ -68,7 +68,7 @@ const groupCards = [
       <header class="flex flex-col gap-st-2 mb-st-4 md:mb-st-5 lg:mb-st-6 max-w-st-160">
         <StTypography
           variant="body-large"
-          class-name="text-st-secondary uppercase tracking-[0.3em]"
+          class-name="text-st-content-secondary uppercase tracking-[0.3em]"
         >
           Informação
         </StTypography>
@@ -81,7 +81,7 @@ const groupCards = [
           class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Mitos desvendados. Escolhas mais
-          <span class="text-st-secondary italic"> conscientes</span>.
+          <span class="text-st-content-secondary italic"> conscientes</span>.
         </StTypography>
       </header>
 
@@ -115,7 +115,7 @@ const groupCards = [
       >
         <StTypography
           variant="body-large"
-          class-name="text-st-secondary uppercase tracking-[0.3em]"
+          class-name="text-st-content-secondary uppercase tracking-[0.3em]"
         >
           Apoio
         </StTypography>
@@ -128,7 +128,7 @@ const groupCards = [
           class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Precisou de apoio? A gente tá
-          <span class="text-st-secondary italic"> junto</span>.
+          <span class="text-st-content-secondary italic"> junto</span>.
         </StTypography>
 
         <StTypography variant="body-medium" class-name="text-content-secondary">
@@ -179,7 +179,7 @@ const groupCards = [
           class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Clínicas de
-          <span class="text-st-secondary italic"> apoio</span>.
+          <span class="text-st-content-secondary italic"> apoio</span>.
         </StTypography>
       </div>
 
@@ -225,7 +225,7 @@ const groupCards = [
           class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Grupos de
-          <span class="text-st-secondary italic"> apoio</span>.
+          <span class="text-st-content-secondary italic"> apoio</span>.
         </StTypography>
       </div>
 

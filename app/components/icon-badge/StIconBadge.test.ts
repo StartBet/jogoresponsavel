@@ -27,7 +27,7 @@ describe('StIconBadge', () => {
         'h-st-6',
         'rounded-st-1',
         'bg-st-surface-3',
-        'text-st-secondary',
+        'text-st-content-secondary',
         'shadow-st-paper-1'
       ])
     )

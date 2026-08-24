@@ -5,7 +5,7 @@ export const stSelfAssessmentStepClass = 'flex flex-col gap-st-3'
 /** O `pr` reserva o canto onde o StModal posiciona o botão de fechar. */
 export const stSelfAssessmentProgressClass = 'mb-st-3 pr-st-4'
 
-export const stSelfAssessmentEyebrowClass = 'text-st-secondary uppercase tracking-[0.3em]'
+export const stSelfAssessmentEyebrowClass = 'text-st-content-secondary uppercase tracking-[0.3em]'
 
 export const stSelfAssessmentTitleClass = 'text-st-lg md:text-st-xl lg:text-st-2xl'
 

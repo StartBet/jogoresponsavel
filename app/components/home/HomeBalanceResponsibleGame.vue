@@ -39,7 +39,7 @@ const balanceCards = [
         <header class="flex flex-col gap-st-2">
           <StTypography
             variant="body-large"
-            class-name="text-st-secondary uppercase tracking-[0.3em]"
+            class-name="text-st-content-secondary uppercase tracking-[0.3em]"
           >
             Equilíbrio
           </StTypography>
@@ -77,7 +77,11 @@ const balanceCards = [
           class-name="h-full flex flex-col gap-st-2 p-st-4 border border-st-border-2 rounded-st-2 relative overflow-hidden"
         >
           <div class="relative flex items-center justify-between gap-st-2">
-            <StTypography variant="hero-title" line-height="tight" class-name="text-st-secondary">
+            <StTypography
+              variant="hero-title"
+              line-height="tight"
+              class-name="text-st-content-secondary"
+            >
               {{ card.number }}
             </StTypography>
             <StIconBadge :name="card.icon" />

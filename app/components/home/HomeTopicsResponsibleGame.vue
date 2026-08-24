@@ -160,7 +160,7 @@ const mythCards = [
           >
             <StTypography variant="heading-4" as="h3" class-name="text-content-default">
               Aposta é entretenimento —
-              <span class="text-st-secondary italic"> não renda</span>.
+              <span class="text-st-content-secondary italic"> não renda</span>.
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-default">
               Resultados não são garantidos e nenhuma estratégia elimina completamente o risco. Use
@@ -196,7 +196,7 @@ const mythCards = [
           >
             <StTypography variant="heading-4" as="h3" class-name="text-content-default">
               Quando vale
-              <span class="text-st-secondary italic"> acender o alerta</span>?
+              <span class="text-st-content-secondary italic"> acender o alerta</span>?
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-default">
               Preste atenção nos comportamentos abaixo. Se algum se repetir com frequência, é um bom
@@ -231,7 +231,7 @@ const mythCards = [
           >
             <StTypography variant="heading-4" as="h3" class-name="text-content-default">
               Probabilidade
-              <span class="text-st-secondary italic"> não é promessa</span>.
+              <span class="text-st-content-secondary italic"> não é promessa</span>.
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-default">
               Antes de apostar, conheça os conceitos que regem os jogos. Entender como cada produto
@@ -266,7 +266,7 @@ const mythCards = [
           >
             <StTypography variant="heading-4" as="h3" class-name="text-content-default">
               Derrube esses
-              <span class="text-st-secondary italic"> mitos</span>.
+              <span class="text-st-content-secondary italic"> mitos</span>.
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-default">
               Muitas crenças sobre apostas não se sustentam. Confira os mitos mais comuns e o que
@@ -306,7 +306,7 @@ const mythCards = [
           <div class-name="max-w-st-104 w-full p-st-3 rounded-st-2 border border-st-border-2">
             <StTypography variant="heading-4" as="h3" class-name="text-content-default mb-st-2">
               Você joga de forma
-              <span class="text-st-secondary italic">responsável</span>?
+              <span class="text-st-content-secondary italic">responsável</span>?
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-secondary">
               Faça a nossa autoavaliação — rápida, anônima e sigilosa.
