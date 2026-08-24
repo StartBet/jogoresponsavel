@@ -31,10 +31,10 @@ const balanceCards = [
 </script>
 
 <template>
-  <section id="balance" class="bg-st-surface-4 py-st-10 md:py-st-15 lg:py-st-20">
+  <section id="balance" class="bg-st-surface-4 py-st-6 md:py-st-8 lg:py-st-10">
     <div class="mx-auto w-full max-w-st-160 px-st-2 md:px-st-6 lg:px-st-10">
       <div
-        class="flex flex-col gap-st-4 lg:flex-row lg:items-end lg:justify-between lg:gap-st-6 mb-st-8 md:mb-st-10 lg:mb-st-12"
+        class="flex flex-col gap-st-4 lg:flex-row lg:items-end lg:justify-between lg:gap-st-6 mb-st-4 md:mb-st-5 lg:mb-st-6"
       >
         <header class="flex flex-col gap-st-2">
           <StTypography
@@ -46,10 +46,10 @@ const balanceCards = [
 
           <StTypography
             as="h2"
-            line-height="snug"
+            line-height="tight"
             :lines="2"
             variant="hero-title"
-            class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+            class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
           >
             Mantenha o equilíbrio do começo ao fim.
           </StTypography>
@@ -77,7 +77,7 @@ const balanceCards = [
           class-name="h-full flex flex-col gap-st-2 p-st-4 border border-st-border-2 rounded-st-2 relative overflow-hidden"
         >
           <div class="relative flex items-center justify-between gap-st-2">
-            <StTypography variant="hero-title" line-height="snug" class-name="text-st-secondary">
+            <StTypography variant="hero-title" line-height="tight" class-name="text-st-secondary">
               {{ card.number }}
             </StTypography>
             <StIconBadge :name="card.icon" />

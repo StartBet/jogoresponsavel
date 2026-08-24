@@ -56,9 +56,9 @@ const chatHref = 'https://start.bet.br/'
 
             <StTypography
               as="h2"
-              line-height="snug"
+              line-height="tight"
               variant="hero-title"
-              class-name="text-st-lg md:text-st-xl lg:text-st-2xl"
+              class-name="!text-st-lg md:!text-st-xl lg:!text-st-2xl"
             >
               Ainda ficou dúvida?
             </StTypography>

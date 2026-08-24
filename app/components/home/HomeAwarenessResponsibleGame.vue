@@ -27,12 +27,12 @@ const principleCards = [
 </script>
 
 <template>
-  <section class="bg-st-surface-4 py-st-10 md:py-st-15 lg:py-st-20">
+  <section class="bg-st-surface-4 py-st-6 md:py-st-8 lg:py-st-10">
     <div class="mx-auto w-full max-w-st-160 px-st-2 md:px-st-6 lg:px-st-10">
       <StPaper
         surface="1"
         :elevation="2"
-        class-name="mb-st-10 md:mb-st-14 lg:mb-st-18 p-st-6 md:p-st-8 lg:p-st-12 rounded-st-2 border border-st-secondary flex flex-col items-center text-center gap-st-4"
+        class-name="mb-st-5 md:mb-st-6 lg:mb-st-8 p-st-4 md:p-st-5 lg:p-st-6 rounded-st-2 border border-st-secondary flex flex-col items-center text-center gap-st-4"
       >
         <StTypography
           variant="body-large"
@@ -43,10 +43,10 @@ const principleCards = [
 
         <StTypography
           as="h2"
-          line-height="snug"
+          line-height="tight"
           :lines="2"
           variant="hero-title"
-          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+          class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Pedir ajuda também é
           <span class="text-st-secondary italic"> jogar bem</span>.

@@ -24,7 +24,7 @@ const heroImageSrc = `${heroImageBase},width=1024/https://cdn.start.bet.br/start
 <template>
   <section class="relative isolate overflow-hidden">
     <div
-      class="mx-auto w-full max-w-st-160 px-st-2 pb-st-6 md:px-st-6 md:py-st-15 lg:px-st-10 lg:py-st-20"
+      class="mx-auto w-full max-w-st-160 px-st-2 pb-st-4 md:px-st-6 md:py-st-8 lg:px-st-10 lg:py-st-10"
     >
       <div class="grid grid-cols-1 items-center lg:grid-cols-2 lg:gap-st-6">
         <div class="order-2 lg:order-1">
@@ -37,17 +37,17 @@ const heroImageSrc = `${heroImageBase},width=1024/https://cdn.start.bet.br/start
 
           <StTypography
             as="h1"
-            line-height="snug"
+            line-height="tight"
             :lines="2"
             variant="hero-title"
-            class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+            class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
           >
             Deixe o lado Responsável da emoção
           </StTypography>
 
           <StTypography
             variant="body-large"
-            class-name="text-content-default/90 text-st-sm md:text-st-base lg:text-st-lg max-w-st-72 md:max-w-st-80 lg:max-w-[40ch] mb-st-8 text-left"
+            class-name="text-content-default/90 text-st-sm md:text-st-base lg:text-st-lg max-w-st-72 md:max-w-st-80 lg:max-w-[40ch] mb-st-4 text-left"
           >
             Na Start.bet, apostar deve continuar sendo entretenimento. Defina seus limites, entenda
             como o jogo funciona e reconheça a hora de parar.

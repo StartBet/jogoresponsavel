@@ -37,9 +37,9 @@ const controlToolsCards = [
 </script>
 
 <template>
-  <section id="control" class="bg-st-surface-4 py-st-10 md:py-st-15 lg:py-st-20">
+  <section id="control" class="bg-st-surface-4 py-st-6 md:py-st-8 lg:py-st-10">
     <div class="mx-auto w-full max-w-st-160 px-st-2 md:px-st-6 lg:px-st-10">
-      <header class="flex flex-col gap-st-2 mb-st-8 md:mb-st-10 lg:mb-st-12 max-w-st-160">
+      <header class="flex flex-col gap-st-2 mb-st-4 md:mb-st-5 lg:mb-st-6 max-w-st-160">
         <StTypography
           variant="body-large"
           class-name="text-st-secondary uppercase tracking-[0.3em]"
@@ -49,10 +49,10 @@ const controlToolsCards = [
 
         <StTypography
           as="h2"
-          line-height="snug"
+          line-height="tight"
           :lines="2"
           variant="hero-title"
-          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+          class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Ferramentas para deixar você no comando.
         </StTypography>
@@ -64,7 +64,7 @@ const controlToolsCards = [
       </header>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-st-4 md:gap-st-4 mb-st-6 md:mb-st-8 lg:mb-st-10"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-st-4 md:gap-st-4 mb-st-3 md:mb-st-4 lg:mb-st-5"
       >
         <StPaper
           v-for="card in controlToolsCards"

@@ -63,9 +63,9 @@ const groupCards = [
 </script>
 
 <template>
-  <section id="support" class="bg-st-surface-4 py-st-10 md:py-st-15 lg:py-st-20">
+  <section id="support" class="bg-st-surface-4 py-st-6 md:py-st-8 lg:py-st-10">
     <div class="mx-auto w-full max-w-st-160 px-st-2 md:px-st-6 lg:px-st-10">
-      <header class="flex flex-col gap-st-2 mb-st-8 md:mb-st-10 lg:mb-st-12 max-w-st-160">
+      <header class="flex flex-col gap-st-2 mb-st-4 md:mb-st-5 lg:mb-st-6 max-w-st-160">
         <StTypography
           variant="body-large"
           class-name="text-st-secondary uppercase tracking-[0.3em]"
@@ -75,10 +75,10 @@ const groupCards = [
 
         <StTypography
           as="h2"
-          line-height="snug"
+          line-height="tight"
           :lines="2"
           variant="hero-title"
-          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+          class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Mitos desvendados. Escolhas mais
           <span class="text-st-secondary italic"> conscientes</span>.
@@ -86,7 +86,7 @@ const groupCards = [
       </header>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-st-4 md:gap-st-4 mb-st-12 md:mb-st-16 lg:mb-st-20"
+        class="grid grid-cols-1 md:grid-cols-2 gap-st-4 md:gap-st-4 mb-st-6 md:mb-st-8 lg:mb-st-10"
       >
         <StPaper
           v-for="card in mythBustedCards"
@@ -111,7 +111,7 @@ const groupCards = [
       </div>
 
       <div
-        class="flex flex-col items-center text-center gap-st-2 mb-st-6 md:mb-st-8 lg:mb-st-10 max-w-st-120 mx-auto"
+        class="flex flex-col items-center text-center gap-st-2 mb-st-3 md:mb-st-4 lg:mb-st-5 max-w-st-120 mx-auto"
       >
         <StTypography
           variant="body-large"
@@ -122,10 +122,10 @@ const groupCards = [
 
         <StTypography
           as="h3"
-          line-height="snug"
+          line-height="tight"
           :lines="2"
           variant="hero-title"
-          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+          class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Precisou de apoio? A gente tá
           <span class="text-st-secondary italic"> junto</span>.
@@ -138,7 +138,7 @@ const groupCards = [
       </div>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-st-4 md:gap-st-4 mb-st-10 md:mb-st-12 lg:mb-st-16"
+        class="grid grid-cols-1 md:grid-cols-2 gap-st-4 md:gap-st-4 mb-st-5 md:mb-st-6 lg:mb-st-8"
       >
         <StPaper
           v-for="card in supportChannelCards"
@@ -169,14 +169,14 @@ const groupCards = [
       </div>
 
       <div
-        class="border-t border-st-border-2 pt-st-8 md:pt-st-10 lg:pt-st-12 mb-st-8 md:mb-st-10 lg:mb-st-12 flex flex-col items-center text-center gap-st-2"
+        class="border-t border-st-border-2 pt-st-4 md:pt-st-5 lg:pt-st-6 mb-st-4 md:mb-st-5 lg:mb-st-6 flex flex-col items-center text-center gap-st-2"
       >
         <StTypography
           as="h3"
-          line-height="snug"
+          line-height="tight"
           :lines="2"
           variant="hero-title"
-          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+          class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Clínicas de
           <span class="text-st-secondary italic"> apoio</span>.
@@ -184,7 +184,7 @@ const groupCards = [
       </div>
 
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-st-4 md:gap-st-4 mb-st-10 md:mb-st-12 lg:mb-st-16"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-st-4 md:gap-st-4 mb-st-5 md:mb-st-6 lg:mb-st-8"
       >
         <StPaper
           v-for="card in clinicCards"
@@ -215,14 +215,14 @@ const groupCards = [
       </div>
 
       <div
-        class="border-t border-st-border-2 pt-st-8 md:pt-st-10 lg:pt-st-12 mb-st-8 md:mb-st-10 lg:mb-st-12 flex flex-col items-center text-center gap-st-2"
+        class="border-t border-st-border-2 pt-st-4 md:pt-st-5 lg:pt-st-6 mb-st-4 md:mb-st-5 lg:mb-st-6 flex flex-col items-center text-center gap-st-2"
       >
         <StTypography
           as="h3"
-          line-height="snug"
+          line-height="tight"
           :lines="2"
           variant="hero-title"
-          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+          class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Grupos de
           <span class="text-st-secondary italic"> apoio</span>.

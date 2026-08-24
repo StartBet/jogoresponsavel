@@ -104,7 +104,7 @@ const mythCards = [
 </script>
 
 <template>
-  <section id="topics" class="bg-st-surface-4 py-st-10 md:py-st-15 lg:py-st-20">
+  <section id="topics" class="bg-st-surface-4 py-st-6 md:py-st-8 lg:py-st-10">
     <div class="mx-auto w-full max-w-st-160 px-st-2 md:px-st-6 lg:px-st-10">
       <header class="flex flex-col gap-st-2">
         <StTypography
@@ -116,17 +116,17 @@ const mythCards = [
 
         <StTypography
           as="h2"
-          line-height="snug"
+          line-height="tight"
           :lines="2"
           variant="hero-title"
-          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+          class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Antes de jogar, entenda o que está em jogo.
         </StTypography>
 
         <StTypography
           variant="body-large"
-          class-name="text-content-default/90 text-st-sm md:text-st-base lg:text-st-lg max-w-st-72 md:max-w-st-80 lg:max-w-[60ch] mb-st-8 text-left"
+          class-name="text-content-default/90 text-st-sm md:text-st-base lg:text-st-lg max-w-st-72 md:max-w-st-80 lg:max-w-[60ch] mb-st-4 text-left"
         >
           Quanto mais clareza você tem sobre probabilidades, aleatoriedade e risco, mais fácil fica
           tomar decisões com a cabeça <br />— e não no impulso.
@@ -301,7 +301,7 @@ const mythCards = [
 
         <StPaper
           border-radius="2"
-          class="mt-st-6 md:mt-st-6 lg:mt-st-8 p-st-4 flex flex-col gap-st-4 items-start lg:flex-row lg:items-center lg:justify-between"
+          class="mt-st-4 md:mt-st-4 lg:mt-st-5 p-st-4 flex flex-col gap-st-4 items-start lg:flex-row lg:items-center lg:justify-between"
         >
           <div class-name="max-w-st-104 w-full p-st-3 rounded-st-2 border border-st-border-2">
             <StTypography variant="heading-4" as="h3" class-name="text-content-default mb-st-2">
