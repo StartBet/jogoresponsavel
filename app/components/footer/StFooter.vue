@@ -1,8 +1,29 @@
 <script setup lang="ts">
-import { StButton, StIcon, StPaper, StTypography } from '@startbet/st-core-ui'
+import { computed } from 'vue'
+import { StButton, StIcon, StIllustration, StPaper, StTypography } from '@startbet/st-core-ui'
 import StIconBadge from '~/components/icon-badge'
+import { useThemeService } from '~/services/themeService'
 
 defineOptions({ name: 'StFooter' })
+
+const { theme } = useThemeService()
+
+const brandIllustrationName = computed(() =>
+  theme.value === 'light' ? 'brands/logo_light' : 'brands/logo_dark'
+)
+
+const legalBadges = [
+  {
+    id: 'autorizado-mf',
+    src: 'https://cdn.start.bet.br/cdn-cgi/image/quality=70,format=auto/startbet/footer/autorizado-mf.png',
+    alt: 'Autorizado pelo Ministério da Fazenda'
+  },
+  {
+    id: 'jogue-com-responsabilidade',
+    src: 'https://cdn.start.bet.br/startbet/footer/jogue-com-resposabilidade.svg',
+    alt: 'Jogue com responsabilidade — proibido para menores de 18 anos'
+  }
+] as const
 
 const supportChannels = [
   {
@@ -112,6 +133,54 @@ const chatHref = 'https://start.bet.br/'
           </a>
         </div>
       </StPaper>
+
+      <div class="mt-st-4 md:mt-st-5 flex flex-col gap-st-3 md:gap-st-4">
+        <NuxtLink to="/" aria-label="Home" class="w-fit">
+          <StIllustration
+            :name="brandIllustrationName"
+            alt="Startbet"
+            height="4"
+            class-name="transition-all duration-200 ease-in-out hover:drop-shadow-action-hover active:drop-shadow-action-pressed"
+          />
+        </NuxtLink>
+
+        <div class="flex flex-col gap-st-4 lg:flex-row lg:items-start lg:justify-between">
+          <div class="flex flex-col gap-st-3 lg:max-w-[70%]">
+            <StTypography as="p" variant="body-small" class-name="text-st-content-disable">
+              A <span class="text-st-content-secondary font-semibold">Startbet</span> é operada pela
+              LBBR APOSTAS DE QUOTA FIXA S.A, uma empresa registrada sob o CNPJ nº
+              56.441.713/0001-45, licenciada - em nível federal - pela Secretaria de Prêmios e
+              Apostas do Ministério da Fazenda (&ldquo;SPA/MF&rdquo;) no Brasil com o número de
+              Autorização SPA/MF nº 527, publicada em 14 de março de 2025 no Diário Oficial da União
+              | Ouvidoria: 0800 033 0396, ouvidoria@lbbr.org Endereço Sede LBBR: Cidade e Estado de
+              São Paulo, na Rua Luigi Galvani, nº 200, 5º Andar, cj. 52, Cidade Monções, CEP
+              04.575-020
+            </StTypography>
+
+            <StTypography
+              as="p"
+              variant="body-small"
+              weight="bold"
+              class-name="text-st-content-disable"
+            >
+              Ministério da Fazenda adverte: Aposta não é investimento e pode causar dependência.
+              Ganhos passados não garantem ganhos futuros. Autorização SPA/MF nº 527 de 2025.
+              Proibido para menores de 18 anos.
+            </StTypography>
+          </div>
+
+          <div class="flex shrink-0 flex-col items-start gap-st-3">
+            <img
+              v-for="badge in legalBadges"
+              :key="badge.id"
+              :src="badge.src"
+              :alt="badge.alt"
+              loading="lazy"
+              class="h-auto w-st-30 object-contain"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 </template>

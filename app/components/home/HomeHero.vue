@@ -96,7 +96,7 @@ const heroImageSrc = `${heroImageBase},width=1024/https://cdn.start.bet.br/start
               width="1024"
               height="683"
               alt="Jogo Responsável — você no controle"
-              class="w-full h-auto rounded-st-2 object-cover shadow-st-paper-4"
+              class="w-full h-auto rounded-st-2 object-cover"
               loading="eager"
               fetchpriority="high"
               decoding="async"

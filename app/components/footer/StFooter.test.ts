@@ -10,7 +10,11 @@ vi.mock('@startbet/st-core-ui', async () => {
     StPaper: { template: '<section><slot /></section>' },
     StTypography: { template: '<p><slot /></p>' },
     StButton: { template: '<button><slot /></button>' },
-    StIcon: { template: '<i />' }
+    StIcon: { template: '<i />' },
+    StIllustration: {
+      props: ['name', 'alt'],
+      template: '<img data-test="brand" :data-name="name" :alt="alt" />'
+    }
   }
 })
 
@@ -39,5 +43,20 @@ describe('StFooter', () => {
     const reclameAqui = wrapper.find('a[href*="reclameaqui"]')
     expect(reclameAqui.attributes('target')).toBe('_blank')
     expect(reclameAqui.attributes('rel')).toBe('noopener noreferrer')
+  })
+
+  it('renderiza a marca, o texto legal e os selos', () => {
+    const wrapper = mount(StFooter)
+
+    expect(wrapper.get('[data-test="brand"]').attributes('data-name')).toBe('brands/logo_dark')
+    expect(wrapper.text()).toContain('LBBR APOSTAS DE QUOTA FIXA S.A')
+    expect(wrapper.text()).toContain('Ministério da Fazenda adverte')
+    expect(wrapper.text()).toContain('Proibido para menores de 18 anos')
+
+    const badges = wrapper.findAll('img[loading="lazy"]').map((img) => img.attributes('src'))
+    expect(badges).toEqual([
+      'https://cdn.start.bet.br/cdn-cgi/image/quality=70,format=auto/startbet/footer/autorizado-mf.png',
+      'https://cdn.start.bet.br/startbet/footer/jogue-com-resposabilidade.svg'
+    ])
   })
 })

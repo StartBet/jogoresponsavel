@@ -22,8 +22,8 @@ const brandIllustrationName = computed(() =>
       border-radius="none"
       class-name="border-b border-st-border-1"
     >
-      <div class="w-full grid items-stretch grid-cols-2 lg:grid-cols-3">
-        <div class="flex items-center justify-start px-st-2 gap-st-2">
+      <div class="w-full grid items-stretch p-st-2 grid-cols-2 lg:grid-cols-2">
+        <div class="flex items-center justify-start gap-st-2">
           <NuxtLink to="/" aria-label="Home">
             <StIllustration
               :name="brandIllustrationName"
@@ -36,7 +36,7 @@ const brandIllustrationName = computed(() =>
 
         <nav
           aria-label="Navegação Jogo Responsável"
-          class="hidden lg:flex items-center justify-center gap-st-2"
+          class="hidden lg:flex items-center justify-end gap-st-2"
         >
           <NuxtLink to="/#balance">
             <StButton variant="text">Equilíbrio</StButton>
@@ -51,33 +51,6 @@ const brandIllustrationName = computed(() =>
             <StButton variant="text">Apoio</StButton>
           </NuxtLink>
         </nav>
-
-        <div
-          class="flex items-center justify-end gap-st-1 p-st-1 md:p-st-2 md:gap-st-2 rounded-st-1 md:rounded-tl-st-2 md:rounded-bl-st-2 lg:col-start-3"
-        >
-          <a href="https://start.bet.br/?login=0" target="_self" class="hidden md:block">
-            <StButton variant="text" icon-left="right-to-bracket">Entrar</StButton>
-          </a>
-          <a href="https://start.bet.br/?login=0" target="_self" class="hidden md:block">
-            <StButton variant="solid" color="secondary" icon-left="user-plus"> Cadastrar </StButton>
-          </a>
-          <a
-            href="https://start.bet.br/?login=0"
-            target="_self"
-            aria-label="Entrar"
-            class="block md:hidden"
-          >
-            <StButton variant="text" icon-left="right-to-bracket" size="small" />
-          </a>
-          <a
-            href="https://start.bet.br/?login=0"
-            target="_self"
-            aria-label="Cadastrar"
-            class="block md:hidden"
-          >
-            <StButton variant="solid" color="secondary" icon-left="user-plus" size="small" />
-          </a>
-        </div>
       </div>
     </StPaper>
   </header>
