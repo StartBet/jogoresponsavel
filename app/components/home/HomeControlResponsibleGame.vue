@@ -2,7 +2,16 @@
 import { StButton, StPaper, StTypography } from '@startbet/st-core-ui'
 import StIconBadge from '~/components/icon-badge'
 
-const controlToolsCards = [
+interface ControlToolCard {
+  icon: string
+  title: string
+  body: string
+  /** Quando presente, o card ganha um link externo no rodapé. */
+  link?: string
+  linkLabel?: string
+}
+
+const controlToolsCards: ControlToolCard[] = [
   {
     icon: 'coins',
     title: 'Limite de depósito',
@@ -31,9 +40,11 @@ const controlToolsCards = [
   {
     icon: 'right-to-bracket',
     title: 'Autoexclusão',
-    body: 'Bloqueie o acesso à conta por um período escolhido quando uma pausa mais longa for necessária.'
+    body: 'Bloqueie o acesso à conta por um período escolhido quando uma pausa mais longa for necessária.',
+    link: 'https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/autoexclusao',
+    linkLabel: 'Ver no gov.br'
   }
-] as const
+]
 </script>
 
 <template>
@@ -77,9 +88,22 @@ const controlToolsCards = [
           <StTypography variant="highlight-medium" class-name="text-content-default uppercase">
             {{ card.title }}
           </StTypography>
-          <StTypography variant="body-small" class-name="text-content-secondary">
+          <StTypography variant="body-small" class-name="text-content-secondary flex-1">
             {{ card.body }}
           </StTypography>
+
+          <div v-if="card.link" class="pt-st-1 mt-auto">
+            <a
+              :href="card.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-stretch w-fit"
+            >
+              <StButton variant="text" color="secondary" size="small" icon-right="right-to-bracket">
+                {{ card.linkLabel }}
+              </StButton>
+            </a>
+          </div>
         </StPaper>
       </div>
 

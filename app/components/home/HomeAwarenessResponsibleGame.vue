@@ -94,7 +94,7 @@ const principleCards = [
           :key="card.title"
           surface="1"
           :elevation="1"
-          class-name="h-full flex flex-col gap-st-3 p-st-4 border border-st-secondary"
+          class-name="h-full flex flex-col gap-st-1 p-st-3 border border-st-secondary"
         >
           <StIconBadge :name="card.icon" />
           <StTypography variant="highlight-medium" class-name="text-content-default uppercase">
