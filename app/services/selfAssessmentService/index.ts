@@ -74,7 +74,7 @@ const selfAssessmentRisks: Record<SelfAssessmentRiskLevel, SelfAssessmentRisk> =
     level: 'low',
     title: 'Baixo Risco',
     icon: 'circle-check',
-    toneClass: 'text-st-positive',
+    toneClass: 'text-st-content-positive',
     description:
       'Seus hábitos parecem saudáveis. Continue no controle e mantenha os bons hábitos — a diversão fica melhor assim.'
   },
@@ -82,7 +82,7 @@ const selfAssessmentRisks: Record<SelfAssessmentRiskLevel, SelfAssessmentRisk> =
     level: 'moderate',
     title: 'Risco Moderado',
     icon: 'triangle-exclamation',
-    toneClass: 'text-st-warning',
+    toneClass: 'text-st-content-warning',
     description:
       'Há sinais importantes. Recomendamos ativar seus limites e conversar com o nosso atendimento.'
   },
@@ -90,7 +90,7 @@ const selfAssessmentRisks: Record<SelfAssessmentRiskLevel, SelfAssessmentRisk> =
     level: 'high',
     title: 'Risco Elevado',
     icon: 'circle-exclamation',
-    toneClass: 'text-st-negative',
+    toneClass: 'text-st-content-negative',
     description:
       'Os sinais são fortes. Procure apoio profissional e conte com os canais de ajuda. Você não está sozinho.'
   }

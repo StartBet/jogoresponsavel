@@ -12,22 +12,19 @@ import {
   faScaleBalanced,
   faRotateLeft,
   faCircleCheck,
+  faCircleInfo,
   faCoins,
   faBrain,
+  faComment,
   faDice,
   faLock,
   faArrowLeft,
   faArrowRight,
+  faPhone,
   faTriangleExclamation,
-  faCircleExclamation
+  faCircleExclamation,
+  faUpRightFromSquare
 } from '@fortawesome/free-solid-svg-icons'
-import {
-  faInstagram,
-  faTelegram,
-  faTiktok,
-  faXTwitter,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons'
 import { useStIconLibrary } from '~/composables/useStIconLibrary'
 
 export default defineNuxtPlugin(() => {
@@ -47,18 +44,17 @@ export default defineNuxtPlugin(() => {
     faScaleBalanced,
     faRotateLeft,
     faCircleCheck,
+    faCircleInfo,
     faCoins,
     faBrain,
+    faComment,
     faDice,
     faLock,
     faArrowLeft,
     faArrowRight,
+    faPhone,
     faTriangleExclamation,
     faCircleExclamation,
-    faInstagram,
-    faTelegram,
-    faTiktok,
-    faXTwitter,
-    faYoutube
+    faUpRightFromSquare
   )
 })

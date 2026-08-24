@@ -1,7 +1,17 @@
 <script setup lang="ts">
-import { StButton, StIcon, StPaper, StTypography } from '@startbet/st-core-ui'
+import { StButton, StPaper, StTypography } from '@startbet/st-core-ui'
+import StIconBadge from '~/components/icon-badge'
 
-const controlToolsCards = [
+interface ControlToolCard {
+  icon: string
+  title: string
+  body: string
+  /** Quando presente, o card ganha um link externo no rodapé. */
+  link?: string
+  linkLabel?: string
+}
+
+const controlToolsCards: ControlToolCard[] = [
   {
     icon: 'coins',
     title: 'Limite de depósito',
@@ -30,28 +40,30 @@ const controlToolsCards = [
   {
     icon: 'right-to-bracket',
     title: 'Autoexclusão',
-    body: 'Bloqueie o acesso à conta por um período escolhido quando uma pausa mais longa for necessária.'
+    body: 'Bloqueie o acesso à conta por um período escolhido quando uma pausa mais longa for necessária.',
+    link: 'https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/autoexclusao',
+    linkLabel: 'Ver no gov.br'
   }
-] as const
+]
 </script>
 
 <template>
-  <section id="control" class="bg-st-surface-4 py-st-10 md:py-st-15 lg:py-st-20">
+  <section id="control" class="bg-st-surface-4 py-st-6 md:py-st-8 lg:py-st-10">
     <div class="mx-auto w-full max-w-st-160 px-st-2 md:px-st-6 lg:px-st-10">
-      <header class="flex flex-col gap-st-2 mb-st-8 md:mb-st-10 lg:mb-st-12 max-w-st-160">
+      <header class="flex flex-col gap-st-2 mb-st-4 md:mb-st-5 lg:mb-st-6 max-w-st-160">
         <StTypography
           variant="body-large"
-          class-name="text-st-secondary uppercase tracking-[0.3em]"
+          class-name="text-st-content-secondary uppercase tracking-[0.3em]"
         >
           Controle
         </StTypography>
 
         <StTypography
           as="h2"
-          line-height="snug"
+          line-height="tight"
           :lines="2"
           variant="hero-title"
-          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+          class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Ferramentas para deixar você no comando.
         </StTypography>
@@ -63,7 +75,7 @@ const controlToolsCards = [
       </header>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-st-4 md:gap-st-4 mb-st-6 md:mb-st-8 lg:mb-st-10"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-st-4 md:gap-st-4 mb-st-3 md:mb-st-4 lg:mb-st-5"
       >
         <StPaper
           v-for="card in controlToolsCards"
@@ -72,17 +84,26 @@ const controlToolsCards = [
           :elevation="2"
           class-name="h-full flex flex-col gap-st-2 p-st-2 border border-st-border-2"
         >
-          <div
-            class="w-st-6 h-st-6 rounded-st-1 bg-st-secondary flex items-center justify-center text-st-surface-0 shadow-st-paper-1"
-          >
-            <StIcon :name="card.icon" :size="6" />
-          </div>
+          <StIconBadge :name="card.icon" />
           <StTypography variant="highlight-medium" class-name="text-content-default uppercase">
             {{ card.title }}
           </StTypography>
-          <StTypography variant="body-small" class-name="text-content-secondary">
+          <StTypography variant="body-small" class-name="text-content-secondary flex-1">
             {{ card.body }}
           </StTypography>
+
+          <div v-if="card.link" class="pt-st-1 mt-auto">
+            <a
+              :href="card.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-stretch w-fit"
+            >
+              <StButton variant="text" color="secondary" size="small" icon-right="right-to-bracket">
+                {{ card.linkLabel }}
+              </StButton>
+            </a>
+          </div>
         </StPaper>
       </div>
 

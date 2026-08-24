@@ -2,12 +2,12 @@
 import {
   StButton,
   StChip,
-  StIcon,
   StListItem,
   StPaper,
   StTypography,
   StUnorderedList
 } from '@startbet/st-core-ui'
+import StIconBadge from '~/components/icon-badge'
 import { SELF_ASSESSMENT_MODAL_NAME } from '~/components/modal/self-assessment/StSelfAssessmentModal.interface'
 import { useStModal } from '~/composables/useStModal'
 
@@ -104,7 +104,7 @@ const mythCards = [
 </script>
 
 <template>
-  <section id="topics" class="bg-st-surface-4 py-st-10 md:py-st-15 lg:py-st-20">
+  <section id="topics" class="bg-st-surface-4 py-st-6 md:py-st-8 lg:py-st-10">
     <div class="mx-auto w-full max-w-st-160 px-st-2 md:px-st-6 lg:px-st-10">
       <header class="flex flex-col gap-st-2">
         <StTypography
@@ -116,17 +116,17 @@ const mythCards = [
 
         <StTypography
           as="h2"
-          line-height="snug"
+          line-height="tight"
           :lines="2"
           variant="hero-title"
-          class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+          class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
         >
           Antes de jogar, entenda o que está em jogo.
         </StTypography>
 
         <StTypography
           variant="body-large"
-          class-name="text-content-default/90 text-st-sm md:text-st-base lg:text-st-lg max-w-st-72 md:max-w-st-80 lg:max-w-[60ch] mb-st-8 text-left"
+          class-name="text-content-default/90 text-st-sm md:text-st-base lg:text-st-lg max-w-st-72 md:max-w-st-80 lg:max-w-[60ch] mb-st-4 text-left"
         >
           Quanto mais clareza você tem sobre probabilidades, aleatoriedade e risco, mais fácil fica
           tomar decisões com a cabeça <br />— e não no impulso.
@@ -160,7 +160,7 @@ const mythCards = [
           >
             <StTypography variant="heading-4" as="h3" class-name="text-content-default">
               Aposta é entretenimento —
-              <span class="text-st-secondary italic"> não renda</span>.
+              <span class="text-st-content-secondary italic"> não renda</span>.
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-default">
               Resultados não são garantidos e nenhuma estratégia elimina completamente o risco. Use
@@ -175,11 +175,7 @@ const mythCards = [
                 :elevation="2"
                 class-name="h-full flex flex-col gap-st-2 p-st-2 border border-st-border-2"
               >
-                <div
-                  class="w-st-6 h-st-6 rounded-st-1 bg-st-secondary flex items-center justify-center text-st-surface-0 shadow-st-paper-1"
-                >
-                  <StIcon :name="card.icon" :size="6" />
-                </div>
+                <StIconBadge :name="card.icon" />
                 <StTypography
                   variant="highlight-medium"
                   class-name="text-content-default uppercase"
@@ -200,7 +196,7 @@ const mythCards = [
           >
             <StTypography variant="heading-4" as="h3" class-name="text-content-default">
               Quando vale
-              <span class="text-st-secondary italic"> acender o alerta</span>?
+              <span class="text-st-content-secondary italic"> acender o alerta</span>?
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-default">
               Preste atenção nos comportamentos abaixo. Se algum se repetir com frequência, é um bom
@@ -214,11 +210,7 @@ const mythCards = [
                 :elevation="2"
                 class-name="h-full flex flex-col gap-st-2 p-st-2 border border-st-border-2"
               >
-                <div
-                  class="w-st-6 h-st-6 rounded-st-1 bg-st-secondary flex items-center justify-center text-st-surface-0 shadow-st-paper-1"
-                >
-                  <StIcon :name="card.icon" :size="6" />
-                </div>
+                <StIconBadge :name="card.icon" />
                 <StTypography
                   variant="highlight-medium"
                   class-name="text-content-default uppercase"
@@ -239,7 +231,7 @@ const mythCards = [
           >
             <StTypography variant="heading-4" as="h3" class-name="text-content-default">
               Probabilidade
-              <span class="text-st-secondary italic"> não é promessa</span>.
+              <span class="text-st-content-secondary italic"> não é promessa</span>.
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-default">
               Antes de apostar, conheça os conceitos que regem os jogos. Entender como cada produto
@@ -253,11 +245,7 @@ const mythCards = [
                 :elevation="2"
                 class-name="h-full flex flex-col gap-st-2 p-st-2 border border-st-border-2"
               >
-                <div
-                  class="w-st-6 h-st-6 rounded-st-1 bg-st-secondary flex items-center justify-center text-st-surface-0 shadow-st-paper-1"
-                >
-                  <StIcon :name="card.icon" :size="6" />
-                </div>
+                <StIconBadge :name="card.icon" />
                 <StTypography
                   variant="highlight-medium"
                   class-name="text-content-default uppercase"
@@ -278,7 +266,7 @@ const mythCards = [
           >
             <StTypography variant="heading-4" as="h3" class-name="text-content-default">
               Derrube esses
-              <span class="text-st-secondary italic"> mitos</span>.
+              <span class="text-st-content-secondary italic"> mitos</span>.
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-default">
               Muitas crenças sobre apostas não se sustentam. Confira os mitos mais comuns e o que
@@ -313,12 +301,12 @@ const mythCards = [
 
         <StPaper
           border-radius="2"
-          class="mt-st-6 md:mt-st-6 lg:mt-st-8 p-st-4 flex flex-col gap-st-4 items-start lg:flex-row lg:items-center lg:justify-between"
+          class="mt-st-4 md:mt-st-4 lg:mt-st-5 p-st-4 flex flex-col gap-st-4 items-start lg:flex-row lg:items-center lg:justify-between"
         >
           <div class-name="max-w-st-104 w-full p-st-3 rounded-st-2 border border-st-border-2">
             <StTypography variant="heading-4" as="h3" class-name="text-content-default mb-st-2">
               Você joga de forma
-              <span class="text-st-secondary italic">responsável</span>?
+              <span class="text-st-content-secondary italic">responsável</span>?
             </StTypography>
             <StTypography variant="body-medium" class-name="text-content-secondary">
               Faça a nossa autoavaliação — rápida, anônima e sigilosa.

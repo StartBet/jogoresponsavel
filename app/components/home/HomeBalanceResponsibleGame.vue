@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { StIcon, StPaper, StTypography } from '@startbet/st-core-ui'
+import { StPaper, StTypography } from '@startbet/st-core-ui'
+import StIconBadge from '~/components/icon-badge'
 
 const balanceCards = [
   {
@@ -30,25 +31,25 @@ const balanceCards = [
 </script>
 
 <template>
-  <section id="balance" class="bg-st-surface-4 py-st-10 md:py-st-15 lg:py-st-20">
+  <section id="balance" class="bg-st-surface-4 py-st-6 md:py-st-8 lg:py-st-10">
     <div class="mx-auto w-full max-w-st-160 px-st-2 md:px-st-6 lg:px-st-10">
       <div
-        class="flex flex-col gap-st-4 lg:flex-row lg:items-end lg:justify-between lg:gap-st-6 mb-st-8 md:mb-st-10 lg:mb-st-12"
+        class="flex flex-col gap-st-4 lg:flex-row lg:items-end lg:justify-between lg:gap-st-6 mb-st-4 md:mb-st-5 lg:mb-st-6"
       >
         <header class="flex flex-col gap-st-2">
           <StTypography
             variant="body-large"
-            class-name="text-st-secondary uppercase tracking-[0.3em]"
+            class-name="text-st-content-secondary uppercase tracking-[0.3em]"
           >
             Equilíbrio
           </StTypography>
 
           <StTypography
             as="h2"
-            line-height="snug"
+            line-height="tight"
             :lines="2"
             variant="hero-title"
-            class-name="text-st-2xl md:text-st-3xl lg:text-st-4xl"
+            class-name="!text-st-2xl md:!text-st-3xl lg:!text-st-4xl"
           >
             Mantenha o equilíbrio do começo ao fim.
           </StTypography>
@@ -75,15 +76,15 @@ const balanceCards = [
           :elevation="1"
           class-name="h-full flex flex-col gap-st-2 p-st-4 border border-st-border-2 rounded-st-2 relative overflow-hidden"
         >
-          <div class="relative flex items-end justify-between gap-st-2 mb-st-1">
-            <StTypography variant="hero-title" class-name="text-st-secondary">
+          <div class="relative flex items-center justify-between gap-st-2">
+            <StTypography
+              variant="hero-title"
+              line-height="tight"
+              class-name="text-st-content-secondary"
+            >
               {{ card.number }}
             </StTypography>
-            <div
-              class="w-st-8 h-st-8 rounded-st-1 bg-st-secondary flex items-center justify-center text-st-surface-0 shadow-st-paper-1"
-            >
-              <StIcon :name="card.icon" :size="6" />
-            </div>
+            <StIconBadge :name="card.icon" />
           </div>
           <StTypography variant="highlight-medium" class-name="text-content-default uppercase">
             {{ card.title }}

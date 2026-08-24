@@ -39,7 +39,12 @@ defineEmits<{ start: [] }>()
       :elevation="0"
       :class-name="stSelfAssessmentNoticeClass"
     >
-      <StIcon name="lock" :size="3" aria-label="Conteúdo anônimo" class="text-st-secondary" />
+      <StIcon
+        name="lock"
+        :size="3"
+        aria-label="Conteúdo anônimo"
+        class="text-st-content-secondary"
+      />
       <StTypography variant="body-small" :class-name="stSelfAssessmentBodyClass">
         O resultado é anônimo. As suas respostas não são enviadas nem armazenadas por este
         formulário.
