@@ -60,11 +60,11 @@ const principleCards = [
         <div
           class="flex w-full flex-col items-center justify-center gap-st-4 md:w-auto md:flex-row"
         >
-          <NuxtLink to="/#support" class="w-full md:w-auto">
+          <NuxtLink to="/#support" class="block md:hidden w-full">
             <StButton
               variant="solid"
               color="secondary"
-              size="large"
+              size="small"
               icon-right="right-to-bracket"
               :full-width="true"
               class-name="shadow-st-action-hover"
@@ -72,19 +72,49 @@ const principleCards = [
               Ver canais de apoio
             </StButton>
           </NuxtLink>
+          <NuxtLink to="/#support" class="hidden md:block md:w-auto">
+            <StButton
+              variant="solid"
+              color="secondary"
+              size="large"
+              icon-right="right-to-bracket"
+              class-name="shadow-st-action-hover"
+            >
+              Ver canais de apoio
+            </StButton>
+          </NuxtLink>
 
-          <NuxtLink to="https://start.bet.br/privacy-policy" class="w-full md:w-auto">
+          <a
+            href="https://start.bet.br/responsible-gaming"
+            target="_self"
+            class="block md:hidden w-full"
+          >
+            <StButton
+              variant="solid"
+              color="primary"
+              size="small"
+              icon-right="right-to-bracket"
+              :full-width="true"
+              class-name="shadow-st-action-hover"
+            >
+              Políticas do jogo responsável
+            </StButton>
+          </a>
+          <a
+            href="https://start.bet.br/responsible-gaming"
+            target="_self"
+            class="hidden md:block md:w-auto"
+          >
             <StButton
               variant="solid"
               color="primary"
               size="large"
               icon-right="right-to-bracket"
-              :full-width="true"
               class-name="shadow-st-action-hover"
             >
-              Ver política de privacidade
+              Políticas do jogo responsável
             </StButton>
-          </NuxtLink>
+          </a>
         </div>
       </StPaper>
 
