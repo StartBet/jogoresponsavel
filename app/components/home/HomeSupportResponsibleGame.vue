@@ -27,14 +27,14 @@ const supportChannelCards = [
 
 const clinicCards = [
   {
-    title: 'Clínicas Revive',
-    body: 'Tratamento de dependências, incluindo ludopatia, com acolhimento, avaliação e acompanhamento especializado.',
-    link: 'https://clinicasrevive.com.br/'
+    title: 'RAPS',
+    body: 'Rede de Atendimento Psicossocial integrada de serviços que atende pessoas com sofrimento mental ou que enfrentam problemas com uso prejudicial de álcool e outras drogas.',
+    link: 'https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps'
   },
   {
-    title: 'Grupo Vida Serena',
-    body: 'Opções de cuidado e tratamento para dependências comportamentais com suporte clínico e terapêutico.',
-    link: 'https://www.vidaserena.com.br/'
+    title: 'CVV',
+    body: 'Centro de Valorização da Vida é uma associação civil sem fins lucrativos, filantrópica, que é reconhecida como de Utilidade Pública Federal desde 1973.',
+    link: 'https://cvv.org.br/'
   },
   {
     title: 'Procure Clínicas',
