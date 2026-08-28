@@ -55,9 +55,9 @@ const groupCards = [
     link: 'https://www.jogadoresanonimos.com.br/'
   },
   {
-    title: 'Grupo Jog-Anon',
-    body: 'Suporte para familiares e amigos de quem enfrenta problemas com jogos e apostas.',
-    link: 'https://www.gam-anon.org/'
+    title: 'Gordon Moody',
+    body: 'Um serviço global oferecido por Gordon Moody, fornecendo conselhos práticos gratuitos e apoio emocional a qualquer pessoa afetada pelo jogo.',
+    link: 'https://gamblingtherapy.org/pt-br/'
   }
 ] as const
 </script>
