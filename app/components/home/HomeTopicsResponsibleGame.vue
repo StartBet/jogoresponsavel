@@ -320,7 +320,7 @@ const mythCards = [
               size="large"
               icon-left="user-check"
               :full-width="true"
-              class-name="shadow-st-action-hover"
+              class-name=""
               @click="openSelfAssessment"
             >
               Fazer autoavaliação

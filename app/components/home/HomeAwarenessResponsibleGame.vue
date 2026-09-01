@@ -2,6 +2,30 @@
 import { StButton, StPaper, StTypography } from '@startbet/st-core-ui'
 import StIconBadge from '~/components/icon-badge'
 
+const awarenessActions = [
+  {
+    label: 'Ver canais de apoio',
+    to: '/#support',
+    target: '_self',
+    color: 'secondary',
+    icon: 'right-to-bracket'
+  },
+  {
+    label: 'Políticas do jogo responsável',
+    to: 'https://start.bet.br/responsible-gaming',
+    target: '_self',
+    color: 'primary',
+    icon: 'right-to-bracket'
+  },
+  {
+    label: 'Baixar cartilha',
+    to: 'https://cdn.start.bet.br/jogo-responsavel-startbet.pdf',
+    target: '_blank',
+    color: 'primary',
+    icon: 'download'
+  }
+] as const
+
 const principleCards = [
   {
     icon: 'scale-balanced',
@@ -57,64 +81,40 @@ const principleCards = [
           apertar, não espere: procure orientação e use os canais de apoio disponíveis.
         </StTypography>
 
-        <div
-          class="flex w-full flex-col items-center justify-center gap-st-4 md:w-auto md:flex-row"
-        >
-          <NuxtLink to="/#support" class="block md:hidden w-full">
-            <StButton
-              variant="solid"
-              color="secondary"
-              size="small"
-              icon-right="right-to-bracket"
-              :full-width="true"
-              class-name="shadow-st-action-hover"
-            >
-              Ver canais de apoio
-            </StButton>
-          </NuxtLink>
-          <NuxtLink to="/#support" class="hidden md:block md:w-auto">
-            <StButton
-              variant="solid"
-              color="secondary"
-              size="large"
-              icon-right="right-to-bracket"
-              class-name="shadow-st-action-hover"
-            >
-              Ver canais de apoio
-            </StButton>
-          </NuxtLink>
-
-          <a
-            href="https://start.bet.br/responsible-gaming"
-            target="_self"
-            class="block md:hidden w-full"
+        <div class="flex w-full max-w-st-56 flex-col items-stretch gap-st-3">
+          <NuxtLink
+            v-for="action in awarenessActions"
+            :key="action.label"
+            :to="action.to"
+            :target="action.target"
+            :rel="action.target === '_blank' ? 'noopener noreferrer' : undefined"
+            class="block w-full"
           >
-            <StButton
-              variant="solid"
-              color="primary"
-              size="small"
-              icon-right="right-to-bracket"
-              :full-width="true"
-              class-name="shadow-st-action-hover"
-            >
-              Políticas do jogo responsável
-            </StButton>
-          </a>
-          <a
-            href="https://start.bet.br/responsible-gaming"
-            target="_self"
-            class="hidden md:block md:w-auto"
-          >
-            <StButton
-              variant="solid"
-              color="primary"
-              size="large"
-              icon-right="right-to-bracket"
-              class-name="shadow-st-action-hover"
-            >
-              Políticas do jogo responsável
-            </StButton>
-          </a>
+            <div class="block md:hidden">
+              <StButton
+                variant="solid"
+                :color="action.color"
+                size="small"
+                :icon-right="action.icon"
+                :full-width="true"
+                class-name="!justify-center !h-auto min-h-8"
+              >
+                {{ action.label }}
+              </StButton>
+            </div>
+            <div class="hidden md:block">
+              <StButton
+                variant="solid"
+                :color="action.color"
+                size="large"
+                :icon-right="action.icon"
+                :full-width="true"
+                class-name="!justify-center !h-auto min-h-12"
+              >
+                {{ action.label }}
+              </StButton>
+            </div>
+          </NuxtLink>
         </div>
       </StPaper>
 

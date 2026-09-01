@@ -117,7 +117,7 @@ const controlToolsCards: ControlToolCard[] = [
             size="large"
             icon-right="right-to-bracket"
             :full-width="true"
-            class-name="shadow-st-action-hover"
+            class-name=""
           >
             Configurar ferramentas
           </StButton>
