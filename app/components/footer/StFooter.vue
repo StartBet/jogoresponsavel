@@ -131,7 +131,7 @@ const supportChannels = [
               icon-left="comment"
               :full-width="true"
               :disabled="isChatLoading"
-              class-name="shadow-st-action-hover"
+              class-name=""
               @click="openChat"
             >
               {{ isChatLoading ? 'Abrindo chat...' : 'Abrir chat' }}

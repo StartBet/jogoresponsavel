@@ -63,7 +63,7 @@ const heroImageSrc = `${heroImageBase},width=1024/https://cdn.start.bet.br/start
                 size="large"
                 icon-left="sliders"
                 :full-width="true"
-                class-name="shadow-st-action-hover"
+                class-name=""
               >
                 Configurar meus limites
               </StButton>

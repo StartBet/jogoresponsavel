@@ -23,7 +23,8 @@ import {
   faPhone,
   faTriangleExclamation,
   faCircleExclamation,
-  faUpRightFromSquare
+  faUpRightFromSquare,
+  faDownload
 } from '@fortawesome/free-solid-svg-icons'
 import { useStIconLibrary } from '~/composables/useStIconLibrary'
 
@@ -55,6 +56,7 @@ export default defineNuxtPlugin(() => {
     faPhone,
     faTriangleExclamation,
     faCircleExclamation,
-    faUpRightFromSquare
+    faUpRightFromSquare,
+    faDownload
   )
 })
